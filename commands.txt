@@ -1,0 +1,63 @@
+pip3 install virtualenv
+
+#Create virtualenv
+pyenv virtualenv <python_version> <environment_name>
+
+#Create virtualenv for windows
+py -3 -m venv venv
+
+#Activate virualenv:
+(linux/MacOS) source venv/bin/activate
+(windows) venv\Scripts\activate
+
+#Install Flask on the enviroment
+pip3 install flask
+
+#Tell the terminal what application to run
+(Linux/MacOS) export FLASK_APP=main.py
+(Windows) set FLASK_APP=main.py
+
+#install requirements
+pip3 install -r requirements.txt
+
+#install beautifulsoup
+pip install beautifulsoup4
+
+# To activate debug mode
+export FLASK_ENV=development
+
+
+#Run the application
+flask run
+
+#requirements installed this way
+pip install pip_chill
+pip-chill --no-version > requirements.txt
+
+export FLASK_APP=main.py && export FLASK_ENV=development && flask run
+
+
+
+#pyenv
+WARNING: seems you still have not added 'pyenv' to the load path.
+
+# Load pyenv automatically by appending
+# the following to 
+~/.bash_profile if it exists, otherwise ~/.profile (for login shells)
+and ~/.bashrc (for interactive shells) :
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Restart your shell for the changes to take effect.
+
+# Load pyenv-virtualenv automatically by adding
+# the following to ~/.bashrc:
+
+eval "$(pyenv virtualenv-init -)"/
+
+
+
+
+
