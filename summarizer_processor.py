@@ -6,7 +6,7 @@ import bs4 as BeautifulSoup
 
 def summarizeFromContent(content):
     to_tokenize = content
-    summarizer = pipeline("summarization", model="t5-base")
+    summarizer = pipeline("summarization", model="t5-small")
     summary = summarizer(to_tokenize, min_length=75, max_length=1000)
     summaryText = summary[0].get("summary_text") if len(summary)>0  else ''
     return summaryText.capitalize();
@@ -14,7 +14,6 @@ def summarizeFromContent(content):
 
 def summarizeFromURL(url):
     article_content = fetchDataFromUrl(url)
-    print(article_content[100])
     summary = summarizeFromContent(article_content)
     return summary
 

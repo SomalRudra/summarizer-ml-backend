@@ -1,0 +1,2 @@
+Problem: heroku slug size too large
+Solution: in requirements.txt, instead of torch===x.y.z(installs cpu and gpu requirements as well), use torch===x.y.z+cpu, 
