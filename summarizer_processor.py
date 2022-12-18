@@ -1,5 +1,6 @@
 import urllib.request 
 import pickle
+import bs4 as BeautifulSoup
 
 
 # def summarizeFromContent(content):
